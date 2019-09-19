@@ -28,6 +28,10 @@ class GoogleDatas extends Seeder
     public function createData()
     {
         for ($z = 1; $z <= self::MAX_DATA; $z++) {
+            if ($z % 4 == 0) {
+                continue;
+            }
+
             yield [
                 $z, //id
                 $this->getName(), //Имя
